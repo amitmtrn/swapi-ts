@@ -1,0 +1,19 @@
+{
+  "name": "swapi-ts",
+  "version": "1.0.0",
+  "description": "a ts wrapper for swapi.dev",
+  "main": "./dist/SWApi.js",
+  "types": "./dist/SWApi.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "keywords": ["swapi"],
+  "author": "Amit Choukroun",
+  "license": "ISC",
+  "dependencies": {
+    "@types/lodash": "^4.14.167",
+    "lodash": "^4.17.20",
+    "typescript": "^4.1.3"
+  }
+}

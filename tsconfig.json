@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "target": "esnext",
+    "noImplicitAny": true,
+    "lib": ["dom", "es2015", "es2016"],
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test"
+  ]
+}
