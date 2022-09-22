@@ -34,10 +34,10 @@ class Resource {
     }
     async populateSingle(path, obj) {
         if (Array.isArray(obj[path])) {
-            obj[path] = await Promise.all(obj[path].map(url => request(url.replace('http', 'https'))));
+            obj[path] = await Promise.all(obj[path].map(url => request(url.replace('http:', 'https:'))));
             return this;
         }
-        obj[path] = await request(obj[path].replace('http', 'https'));
+        obj[path] = await request(obj[path].replace('http:', 'https:'));
         return this;
     }
     populateRec(path, obj) {
