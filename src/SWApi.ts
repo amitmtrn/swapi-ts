@@ -147,12 +147,12 @@ class Resource < S > {
 
   private async populateSingle(path: string, obj: any) {
     if (Array.isArray(obj[path])) {
-      obj[path] = await Promise.all((obj[path] as string[]).map(url => request(url.replace('http', 'https'))));
+      obj[path] = await Promise.all((obj[path] as string[]).map(url => request(url.replace('http:', 'https:'))));
 
       return this;
     }
 
-    obj[path] = await request((obj[path] as string).replace('http', 'https'));
+    obj[path] = await request((obj[path] as string).replace('http:', 'https:'));
 
     return this;
   }
